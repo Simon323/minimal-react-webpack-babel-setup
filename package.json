@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "test": "echo \"No test specified\" && exit 0"
+    "deploy": "npx webpack --config webpack.config.js",
+    "test": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +16,9 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "connect": "^3.7.0",
     "react-hot-loader": "^4.12.10",
+    "serve-static": "^1.14.1",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"
@@ -23,5 +26,11 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
   }
 }
